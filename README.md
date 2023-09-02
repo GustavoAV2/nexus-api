@@ -1,1 +1,1 @@
-# api-nexus
+# nexus-api
