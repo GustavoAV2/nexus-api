@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj": {}
+    "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj": {
+    "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj",
         "projectName": "Nexus.Api.Domain",
-        "projectPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj",
-        "packagesPath": "C:\\Users\\Gustavo Voltolini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\obj\\",
+        "projectPath": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj",
+        "packagesPath": "C:\\Users\\RafaelMendesdeCarval\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Gustavo Voltolini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RafaelMendesdeCarval\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

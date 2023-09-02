@@ -26,9 +26,9 @@ namespace Nexus.Api.Controllers
 
 
         [HttpPost(Name = "PostChallenge")]
-        public async Task<Challenge> CreateChallenge(Challenge user)
+        public async Task<Challenge> CreateChallenge(Challenge challenge)
         {
-            return await _challengeService.CreateChallenge(user);
+            return await _challengeService.CreateChallenge(challenge);
         }
     }
 }

@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Nexus.Api.Service
-build_property.ProjectDir = C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\
+build_property.ProjectDir = C:\Users\RafaelMendesdeCarval\Desktop\Nexus\nexus-api\Nexus.Api\Nexus.Api.Service\

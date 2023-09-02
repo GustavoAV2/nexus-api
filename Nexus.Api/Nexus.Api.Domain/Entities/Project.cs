@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Nexus.Api.Domain.Entities
 {
@@ -12,5 +13,7 @@ namespace Nexus.Api.Domain.Entities
 
         public string UserId { get; set; }
         public virtual User User { get; set; }
+        public List<Tag> Tags { get; set; }
+
     }
 }
