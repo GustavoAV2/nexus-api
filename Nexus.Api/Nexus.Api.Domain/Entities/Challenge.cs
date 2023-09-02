@@ -8,6 +8,8 @@ namespace Nexus.Api.Domain.Entities
 {
     public class Challenge
     {
-
+        public string Id { get; set; }
+        public string Description { get; set; }
+        public string CompanyId { get; set; }
     }
 }

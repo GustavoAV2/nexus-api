@@ -15,7 +15,12 @@ namespace Nexus.Api.Infrastructure
             modelBuilder.Entity<User>().HasKey(t => t.Id);
 
             modelBuilder.Entity<Project>().HasKey(t => t.Id);
+
             modelBuilder.Entity<Company>().HasKey(t => t.Id);
+            modelBuilder.Entity<Company>().HasMany(c => c.Challenges);
+
+            modelBuilder.Entity<Challenge>().HasKey(t => t.Id);
+
         }
 
         public DbSet<User> User { get; set; }
