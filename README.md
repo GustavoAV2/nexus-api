@@ -16,5 +16,7 @@ API Hackathon Samba Meets
 ---
 
 `Update-Database -Context UserDb`
+
 `Update-Database -Context ProjectDb`
+
 `Update-Database -Context CompanyDb`
