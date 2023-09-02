@@ -12,7 +12,7 @@ using Nexus.Api.Infrastructure;
 namespace Nexus.Api.Infrastructure.Migrations
 {
     [DbContext(typeof(UserDb))]
-    [Migration("20230902201657_UserMigrate")]
+    [Migration("20230902223306_UserMigrate")]
     partial class UserMigrate
     {
         /// <inheritdoc />
@@ -24,6 +24,24 @@ namespace Nexus.Api.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Challenge", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CompanyId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.ToTable("Challenge");
+                });
 
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Company", b =>
                 {
@@ -62,6 +80,24 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.ToTable("Project");
                 });
 
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Tag", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("Tag");
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.User", b =>
                 {
                     b.Property<string>("Id")
@@ -84,6 +120,13 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.ToTable("User");
                 });
 
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Challenge", b =>
+                {
+                    b.HasOne("Nexus.Api.Domain.Entities.Company", null)
+                        .WithMany("Challenges")
+                        .HasForeignKey("CompanyId");
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Project", b =>
                 {
                     b.HasOne("Nexus.Api.Domain.Entities.User", "User")
@@ -91,6 +134,23 @@ namespace Nexus.Api.Infrastructure.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Tag", b =>
+                {
+                    b.HasOne("Nexus.Api.Domain.Entities.Project", null)
+                        .WithMany("Tags")
+                        .HasForeignKey("ProjectId");
+                });
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Company", b =>
+                {
+                    b.Navigation("Challenges");
+                });
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Project", b =>
+                {
+                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("Nexus.Api.Domain.Entities.User", b =>

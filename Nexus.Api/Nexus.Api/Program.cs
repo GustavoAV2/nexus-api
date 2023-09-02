@@ -16,13 +16,14 @@ builder.Services.AddDbContext<UserDb>(opt => opt.UseSqlServer(connectionString))
 builder.Services.AddDbContext<CompanyDb>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDbContext<ProjectDb>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDbContext<ChallengeDb>(opt => opt.UseSqlServer(connectionString));
-
+builder.Services.AddDbContext<TagDb>(opt => opt.UseSqlServer(connectionString));
 
 // Service Injection
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<ICompanyService, CompanyService>();
 builder.Services.AddTransient<IProjectService, ProjectService>();
 builder.Services.AddTransient<IChallengeService, ChallengeService>();
+builder.Services.AddTransient<ITagService, TagService>();
 
 
 var app = builder.Build();

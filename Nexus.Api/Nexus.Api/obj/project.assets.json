@@ -3956,19 +3956,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gustavo Voltolini\\.nuget\\packages\\": {}
+    "C:\\Users\\RafaelMendesdeCarval\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api\\Nexus.Api.csproj",
+      "projectUniqueName": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api\\Nexus.Api.csproj",
       "projectName": "Nexus.Api",
-      "projectPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api\\Nexus.Api.csproj",
-      "packagesPath": "C:\\Users\\Gustavo Voltolini\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api\\obj\\",
+      "projectPath": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api\\Nexus.Api.csproj",
+      "packagesPath": "C:\\Users\\RafaelMendesdeCarval\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gustavo Voltolini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RafaelMendesdeCarval\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3976,20 +3981,22 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj": {
-              "projectPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj"
+            "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj": {
+              "projectPath": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Domain\\Nexus.Api.Domain.csproj"
             },
-            "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Infrastructure\\Nexus.Api.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Infrastructure\\Nexus.Api.Infrastructure.csproj"
+            "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Infrastructure\\Nexus.Api.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Infrastructure\\Nexus.Api.Infrastructure.csproj"
             },
-            "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Service\\Nexus.Api.Service.csproj": {
-              "projectPath": "C:\\Users\\Gustavo Voltolini\\Desktop\\Hackustria\\nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Service\\Nexus.Api.Service.csproj"
+            "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Service\\Nexus.Api.Service.csproj": {
+              "projectPath": "C:\\Users\\RafaelMendesdeCarval\\Desktop\\Nexus\\nexus-api\\Nexus.Api\\Nexus.Api.Service\\Nexus.Api.Service.csproj"
             }
           }
         }
@@ -4038,7 +4045,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -4047,7 +4054,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'BCrypt.Net 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'BCrypt.Net 0.1.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "BCrypt.Net",
       "targetGraphs": [
         "net7.0"

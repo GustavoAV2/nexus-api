@@ -39,6 +39,24 @@ namespace Nexus.Api.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Challenge",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CompanyId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Challenge", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Challenge_Company_CompanyId",
+                        column: x => x.CompanyId,
+                        principalTable: "Company",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Project",
                 columns: table => new
                 {
@@ -58,15 +76,49 @@ namespace Nexus.Api.Infrastructure.Migrations
                         principalColumn: "Id");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Tag",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProjectId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tag", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Tag_Project_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Project",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Challenge_CompanyId",
+                table: "Challenge",
+                column: "CompanyId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Project_UserId",
                 table: "Project",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tag_ProjectId",
+                table: "Tag",
+                column: "ProjectId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Challenge");
+
+            migrationBuilder.DropTable(
+                name: "Tag");
+
             migrationBuilder.DropTable(
                 name: "Company");
 

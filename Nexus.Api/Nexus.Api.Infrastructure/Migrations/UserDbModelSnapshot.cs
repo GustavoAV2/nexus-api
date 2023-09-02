@@ -77,6 +77,24 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.ToTable("Project");
                 });
 
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Tag", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("Tag");
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.User", b =>
                 {
                     b.Property<string>("Id")
@@ -115,9 +133,21 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Tag", b =>
+                {
+                    b.HasOne("Nexus.Api.Domain.Entities.Project", null)
+                        .WithMany("Tags")
+                        .HasForeignKey("ProjectId");
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Company", b =>
                 {
                     b.Navigation("Challenges");
+                });
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Project", b =>
+                {
+                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("Nexus.Api.Domain.Entities.User", b =>
