@@ -6,5 +6,6 @@ namespace Nexus.Api.Domain.Entities
     {
         public string Id { get; set; }
         public string Name { get; set; }
+        public List<Challenge> Challenges { get; set; }
     }
 }
