@@ -4,7 +4,7 @@ API Hackathon Samba Meets
 
 # Modelo do Banco de dados
 
-![Modelo banco de dados](docs\nexus_modelling.drawio.png)
+![Modelo banco de dados](docs/nexus_modelling.drawio.png)
 
 # Migrate and Update Database
 `Add-Migration UserMigrate -Context UserDb`
