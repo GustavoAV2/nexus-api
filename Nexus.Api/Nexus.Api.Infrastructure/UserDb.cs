@@ -24,13 +24,18 @@ namespace Nexus.Api.Infrastructure
             modelBuilder.Entity<UserSkillProject>().HasKey(us => us.Id);
 
             modelBuilder.Entity<Skill>().HasKey(s => s.Id);
+            modelBuilder.Entity<Skill>().HasMany(e => e.Endorsements).WithOne(u => u.Skill);
+
             modelBuilder.Entity<Challenge>().HasKey(ch => ch.Id);
             
             modelBuilder.Entity<Company>().HasKey(c => c.Id);
             modelBuilder.Entity<Company>().HasMany(c => c.Challenges);
 
             modelBuilder.Entity<Tag>().HasKey(t => t.Id);
+
             modelBuilder.Entity<Star>().HasKey(t => t.Id);
+
+            modelBuilder.Entity<Endorsement>().HasKey(t => t.Id);
         }
 
         public DbSet<User> User { get; set; }

@@ -10,5 +10,6 @@ namespace Nexus.Api.Domain.Entities
 
         public string UserId { get; set; }
         public virtual User User { get; set; }
+        public virtual List<Endorsement> Endorsements { get; set; }
     }
 }
