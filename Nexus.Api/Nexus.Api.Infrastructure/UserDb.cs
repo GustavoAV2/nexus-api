@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Nexus.Api.Domain.Entities;
+using System.Text.RegularExpressions;
 
 namespace Nexus.Api.Infrastructure
 {
@@ -36,6 +37,8 @@ namespace Nexus.Api.Infrastructure
             modelBuilder.Entity<Star>().HasKey(t => t.Id);
 
             modelBuilder.Entity<Endorsement>().HasKey(t => t.Id);
+
+            modelBuilder.Entity<UserRelation>().HasKey(t => t.Id);
         }
 
         public DbSet<User> User { get; set; }
