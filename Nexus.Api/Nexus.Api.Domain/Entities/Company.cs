@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Nexus.Api.Domain.Entities
 {
@@ -8,6 +9,7 @@ namespace Nexus.Api.Domain.Entities
     {
         public string Id { get; set; }
         public string Name { get; set; }
+        [JsonIgnore]
         public List<Challenge> Challenges { get; set; }
     }
 }
