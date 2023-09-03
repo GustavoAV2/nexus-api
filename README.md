@@ -2,6 +2,10 @@
 
 API Hackathon Samba Meets
 
+# Mapa do projeto
+
+![Mapa do projeto](docs/nexus_map.jpg)
+
 # Modelo do Banco de dados
 
 ![Modelo banco de dados](docs/nexus_modelling.drawio.png)
