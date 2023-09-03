@@ -26,6 +26,7 @@ logs/
 *.log
 
 # Ignorar arquivos do Visual Studio e outras ferramentas
+.vs/
 .vscode/
 .vscodeignore
 .idea/
