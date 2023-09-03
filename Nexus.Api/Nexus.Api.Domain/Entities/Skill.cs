@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Nexus.Api.Domain.Entities
 {
+    [Table("Skill")]
     public class Skill
     {
         public string Id { get; set; }

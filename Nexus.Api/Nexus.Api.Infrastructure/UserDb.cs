@@ -3,7 +3,6 @@ using Nexus.Api.Domain.Entities;
 
 namespace Nexus.Api.Infrastructure
 {
-
     public class UserDb : DbContext
     {
         public UserDb(DbContextOptions<UserDb> options)
@@ -16,10 +15,11 @@ namespace Nexus.Api.Infrastructure
             modelBuilder.Entity<User>().HasMany(s => s.Stars).WithOne(u => u.User);
             modelBuilder.Entity<User>().HasMany(u => u.Skills).WithOne(u => u.User);
 
-            modelBuilder.Entity<Project>().HasMany(p => p.ProjectSkills).WithOne(p => p.Project);
             modelBuilder.Entity<Project>().HasKey(t => t.Id);
             modelBuilder.Entity<Project>().HasMany(c => c.Tags);
             modelBuilder.Entity<Project>().HasMany(s => s.Stars);
+            modelBuilder.Entity<Project>().HasMany(s => s.Files).WithOne(f => f.Project);
+            modelBuilder.Entity<Project>().HasMany(p => p.ProjectSkills).WithOne(p => p.Project);
 
             modelBuilder.Entity<UserSkillProject>().HasKey(us => us.Id);
 
