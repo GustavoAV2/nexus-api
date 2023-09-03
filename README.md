@@ -81,17 +81,23 @@ The above copyright notice and this permission notice shall be included in all
 
 For questions or suggestions, please feel free to get in touch:
 
-- Nome: Gustavo Antunes Voltolini
-- Email: gustavoant.voltolini@gmail.com
-- [Perfil Linkedin](https://www.linkedin.com/in/gustavo-voltolini/)
+- Name: Gustavo Antunes Voltolini
 
-- Nome: Rafael Mendes De Carvalho
-- Email: rafaelmendes0606@gmail.com
-- [Perfil Linkedin](https://www.linkedin.com/in/rafael-mendes-919755178/)
+  E-mail: gustavoant.voltolini@gmail.com
+  
+  [Perfil Linkedin](https://www.linkedin.com/in/gustavo-voltolini/)
 
-- Nome: Joshua Patrick Loesch Alves
-- Email: joshualoesch@gmail.com
-- [Perfil Linkedin](https://www.linkedin.com/in/joshuaalves/)
+- Name: Rafael Mendes De Carvalho
+
+  E-mail: rafaelmendes0606@gmail.com
+
+  [Perfil Linkedin](https://www.linkedin.com/in/rafael-mendes-919755178/)
+
+- Name: Joshua Patrick Loesch Alves
+
+  E-mail: joshualoesch@gmail.com
+
+  [Linkedin](https://www.linkedin.com/in/joshuaalves/)
 
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
