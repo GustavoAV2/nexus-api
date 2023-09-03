@@ -12,7 +12,7 @@ using Nexus.Api.Infrastructure;
 namespace Nexus.Api.Infrastructure.Migrations
 {
     [DbContext(typeof(UserDb))]
-    [Migration("20230903000327_UserMigrate")]
+    [Migration("20230903023015_UserMigrate")]
     partial class UserMigrate
     {
         /// <inheritdoc />
@@ -54,6 +54,33 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Company");
+                });
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.File", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Size")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("File");
                 });
 
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Project", b =>
@@ -98,6 +125,39 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.ToTable("Skill");
                 });
 
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Star", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProjectId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Star");
+                });
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Tag", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tag");
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.User", b =>
                 {
                     b.Property<string>("Id")
@@ -140,11 +200,35 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.ToTable("UserSkillProject");
                 });
 
+            modelBuilder.Entity("ProjectTag", b =>
+                {
+                    b.Property<string>("ProjectsId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TagsId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ProjectsId", "TagsId");
+
+                    b.HasIndex("TagsId");
+
+                    b.ToTable("ProjectTag");
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Challenge", b =>
                 {
                     b.HasOne("Nexus.Api.Domain.Entities.Company", null)
                         .WithMany("Challenges")
                         .HasForeignKey("CompanyId");
+                });
+
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.File", b =>
+                {
+                    b.HasOne("Nexus.Api.Domain.Entities.Project", "Project")
+                        .WithMany("Files")
+                        .HasForeignKey("ProjectId");
+
+                    b.Navigation("Project");
                 });
 
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Project", b =>
@@ -165,6 +249,19 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Nexus.Api.Domain.Entities.Star", b =>
+                {
+                    b.HasOne("Nexus.Api.Domain.Entities.Project", null)
+                        .WithMany("Stars")
+                        .HasForeignKey("ProjectId");
+
+                    b.HasOne("Nexus.Api.Domain.Entities.User", "User")
+                        .WithMany("Stars")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.UserSkillProject", b =>
                 {
                     b.HasOne("Nexus.Api.Domain.Entities.Project", "Project")
@@ -180,6 +277,21 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.Navigation("Skill");
                 });
 
+            modelBuilder.Entity("ProjectTag", b =>
+                {
+                    b.HasOne("Nexus.Api.Domain.Entities.Project", null)
+                        .WithMany()
+                        .HasForeignKey("ProjectsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Nexus.Api.Domain.Entities.Tag", null)
+                        .WithMany()
+                        .HasForeignKey("TagsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Company", b =>
                 {
                     b.Navigation("Challenges");
@@ -187,7 +299,11 @@ namespace Nexus.Api.Infrastructure.Migrations
 
             modelBuilder.Entity("Nexus.Api.Domain.Entities.Project", b =>
                 {
+                    b.Navigation("Files");
+
                     b.Navigation("ProjectSkills");
+
+                    b.Navigation("Stars");
                 });
 
             modelBuilder.Entity("Nexus.Api.Domain.Entities.User", b =>
@@ -195,6 +311,8 @@ namespace Nexus.Api.Infrastructure.Migrations
                     b.Navigation("Projects");
 
                     b.Navigation("Skills");
+
+                    b.Navigation("Stars");
                 });
 #pragma warning restore 612, 618
         }
