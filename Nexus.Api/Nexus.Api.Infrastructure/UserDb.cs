@@ -12,15 +12,19 @@ namespace Nexus.Api.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasMany(u => u.Projects).WithOne(u => u.User);
-            modelBuilder.Entity<User>().HasKey(t => t.Id);
+            modelBuilder.Entity<User>().HasMany(u => u.Skills).WithOne(u => u.User);
+            modelBuilder.Entity<User>().HasKey(u => u.Id);
 
-            modelBuilder.Entity<Project>().HasKey(t => t.Id);
+            modelBuilder.Entity<Project>().HasKey(p => p.Id);
+            modelBuilder.Entity<Project>().HasMany(p => p.ProjectSkills).WithOne(p => p.Project);
 
-            modelBuilder.Entity<Company>().HasKey(t => t.Id);
+            modelBuilder.Entity<UserSkillProject>().HasKey(us => us.Id);
+
+            modelBuilder.Entity<Skill>().HasKey(s => s.Id);
+            modelBuilder.Entity<Challenge>().HasKey(ch => ch.Id);
+            
+            modelBuilder.Entity<Company>().HasKey(c => c.Id);
             modelBuilder.Entity<Company>().HasMany(c => c.Challenges);
-
-            modelBuilder.Entity<Challenge>().HasKey(t => t.Id);
-
         }
 
         public DbSet<User> User { get; set; }

@@ -26,7 +26,7 @@ namespace Nexus.Api.Controllers
 
 
         [HttpPost(Name = "PostProject")]
-        public async Task<List<Project>> CreateProject(Project project)
+        public async Task<Project> CreateProject(Project project)
         {
             return await _projectService.CreateProject(project);
         }
