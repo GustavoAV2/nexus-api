@@ -13,6 +13,8 @@ namespace Nexus.Api.Domain.Entities
 
         public string UserId { get; set; }
         public virtual User User { get; set; }
+        public virtual List<Tag> Tags { get; set; }
+        public virtual ICollection<Star> Stars { get; set; }
         public virtual List<UserSkillProject> ProjectSkills { get; set; }
     }
 }

@@ -15,5 +15,6 @@ namespace Nexus.Api.Domain.Entities
 
         public virtual ICollection<Skill> Skills { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
+        public virtual ICollection<Star> Stars { get; set; }
     }
 }
