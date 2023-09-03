@@ -15,5 +15,6 @@ namespace Nexus.Api.Domain.Entities
         public virtual User User { get; set; }
         public virtual List<Tag> Tags { get; set; }
         public virtual ICollection<Star> Stars { get; set; }
+        public virtual List<UserSkillProject> ProjectSkills { get; set; }
     }
 }

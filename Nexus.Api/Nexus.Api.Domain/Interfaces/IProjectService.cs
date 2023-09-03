@@ -9,7 +9,7 @@ namespace Nexus.Api.Domain.Interfaces
 {
     public interface IProjectService
     {
-        Task<List<Project>> CreateProject(Project inputProject);
+        Task<Project> CreateProject(Project inputProject);
         Task<List<Project>> GetAllProjects();
     }
 }
