@@ -1,6 +1,4 @@
-# Resume
-
-# Nexus API (Hackathon Samba Meets)
+## Nexus API (Hackathon Samba Meets)
 
 API developed in C# ASP .NET Core 7, feeds and consumes the SQL database.
 
