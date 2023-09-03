@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Nexus.Api.Domain.Entities
 {
-    public class Skill
+    public class Endorsement
     {
         public string Id { get; set; }
-        public string Title { get; set; }
-
         public string UserId { get; set; }
         public virtual User User { get; set; }
-        public virtual List<Endorsement> Endorsements { get; set; }
+        public string SkillId { get; set; }
+        public virtual Skill Skill{ get; set; }
     }
 }

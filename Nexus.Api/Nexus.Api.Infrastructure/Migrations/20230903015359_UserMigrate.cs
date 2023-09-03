@@ -95,6 +95,70 @@ namespace Nexus.Api.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Star",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProjectId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Star", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Star_Project_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Project",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Star_User_UserId",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Tag",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProjectId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tag", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Tag_Project_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Project",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Endorsement",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    SkillId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Endorsement", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Endorsement_Skill_SkillId",
+                        column: x => x.SkillId,
+                        principalTable: "Skill",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Endorsement_User_UserId",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UserSkillProject",
                 columns: table => new
                 {
@@ -123,6 +187,16 @@ namespace Nexus.Api.Infrastructure.Migrations
                 column: "CompanyId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Endorsement_SkillId",
+                table: "Endorsement",
+                column: "SkillId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Endorsement_UserId",
+                table: "Endorsement",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Project_UserId",
                 table: "Project",
                 column: "UserId");
@@ -131,6 +205,21 @@ namespace Nexus.Api.Infrastructure.Migrations
                 name: "IX_Skill_UserId",
                 table: "Skill",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Star_ProjectId",
+                table: "Star",
+                column: "ProjectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Star_UserId",
+                table: "Star",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tag_ProjectId",
+                table: "Tag",
+                column: "ProjectId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserSkillProject_ProjectId",
@@ -148,6 +237,15 @@ namespace Nexus.Api.Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Challenge");
+
+            migrationBuilder.DropTable(
+                name: "Endorsement");
+
+            migrationBuilder.DropTable(
+                name: "Star");
+
+            migrationBuilder.DropTable(
+                name: "Tag");
 
             migrationBuilder.DropTable(
                 name: "UserSkillProject");
