@@ -3,7 +3,6 @@ using Nexus.Api.Domain.Entities;
 
 namespace Nexus.Api.Infrastructure
 {
-
     public class ProjectDb : DbContext
     {
         public ProjectDb(DbContextOptions<ProjectDb> options)
