@@ -1,0 +1,17 @@
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\bin\Debug\net7.0\Nexus.Api.Infrastructure.deps.json
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\bin\Debug\net7.0\Nexus.Api.Infrastructure.runtimeconfig.json
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\bin\Debug\net7.0\Nexus.Api.Infrastructure.dll
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\bin\Debug\net7.0\Nexus.Api.Infrastructure.pdb
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\bin\Debug\net7.0\Nexus.Api.Domain.dll
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\bin\Debug\net7.0\Nexus.Api.Domain.pdb
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.AssemblyInfo.cs
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.csproj.CopyComplete
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.dll
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\refint\Nexus.Api.Infrastructure.dll
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.pdb
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\Nexus.Api.Infrastructure.genruntimeconfig.cache
+C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Infrastructure\obj\Debug\net7.0\ref\Nexus.Api.Infrastructure.dll

@@ -13,7 +13,7 @@ namespace Nexus.Api.Infrastructure
         {
             modelBuilder.Entity<User>().HasMany(u => u.Projects).WithOne(u => u.User);
             modelBuilder.Entity<User>().HasKey(t => t.Id);
-            modelBuilder.Entity<User>().HasMany(s => s.Stars).WithOne(u => u.user);
+            modelBuilder.Entity<User>().HasMany(s => s.Stars).WithOne(u => u.User);
             modelBuilder.Entity<User>().HasMany(u => u.Skills).WithOne(u => u.User);
 
             modelBuilder.Entity<Project>().HasMany(p => p.ProjectSkills).WithOne(p => p.Project);
