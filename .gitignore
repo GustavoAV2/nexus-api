@@ -1,0 +1,47 @@
+# Arquivos de compilação
+bin/
+obj/
+
+# Arquivos de saída de compilação
+*.dll
+*.exe
+*.pdb
+*.dll.config
+
+# Arquivos temporários
+[Tt]emp/
+[Vv]isual[Ss]tudio[Ss]tate/
+PrecompiledWeb/
+npm-debug.log
+
+# Diretório de saída
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Oo][Uu][Tt]/
+[Ii][Nn][Tt]/
+[Dd][Oo][Cc][Uu][Mm][Ee][Nn][Tt][Ss]/
+
+# Logs e arquivos de rastreamento
+logs/
+*.log
+
+# Arquivos do Visual Studio
+.vscode/
+.vscodeignore
+.idea/
+
+# Folders to ignore
+.svn/
+__MACOSX/
+Thumbs.db/
+ehthumbs.db/
+
+# Arquivos de publicação web
+publish/
+node_modules/
