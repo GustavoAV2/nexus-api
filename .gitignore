@@ -1,20 +1,14 @@
-# Arquivos de compilação
-bin/
-obj/
+# Ignorar pastas bin e obj em todos os projetos da solução
+**/bin/
+**/obj/
 
-# Arquivos de saída de compilação
+# Ignorar arquivos de compilação
 *.dll
 *.exe
 *.pdb
 *.dll.config
 
-# Arquivos temporários
-[Tt]emp/
-[Vv]isual[Ss]tudio[Ss]tate/
-PrecompiledWeb/
-npm-debug.log
-
-# Diretório de saída
+# Ignorar arquivos de saída de compilação do Visual Studio
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -27,21 +21,19 @@ x86/
 [Ii][Nn][Tt]/
 [Dd][Oo][Cc][Uu][Mm][Ee][Nn][Tt][Ss]/
 
-# Logs e arquivos de rastreamento
+# Ignorar logs e arquivos de rastreamento
 logs/
 *.log
 
-# Arquivos do Visual Studio
+# Ignorar arquivos do Visual Studio e outras ferramentas
 .vscode/
 .vscodeignore
 .idea/
-
-# Folders to ignore
 .svn/
 __MACOSX/
 Thumbs.db/
 ehthumbs.db/
 
-# Arquivos de publicação web
+# Ignorar arquivos de publicação web
 publish/
 node_modules/
