@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Nexus.Api.Domain.Interfaces;
 using Nexus.Api.Service;
+using Nexus.Api.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,7 @@ builder.Services.AddDbContext<TagDb>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDbContext<StarDb>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDbContext<EndorsementDb>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDbContext<FileDb>(opt => opt.UseSqlServer(connectionString));
+builder.Services.AddDbContext<UserRelationDb>(opt => opt.UseSqlServer(connectionString));
 
 // Service Injection
 builder.Services.AddTransient<IUserService, UserService>();
@@ -33,6 +35,7 @@ builder.Services.AddTransient<ITagService, TagService>();
 builder.Services.AddTransient<IStarService, StarService>();
 builder.Services.AddTransient<IEndorsementService, EndorsementService>();
 builder.Services.AddTransient<IFileService, FileService>();
+builder.Services.AddTransient<IUserRelationService, UserRelationService>();
 
 var app = builder.Build();
 
