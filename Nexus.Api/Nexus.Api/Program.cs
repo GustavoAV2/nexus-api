@@ -17,6 +17,7 @@ builder.Services.AddDbContext<CompanyDb>(opt => opt.UseSqlServer(connectionStrin
 builder.Services.AddDbContext<ProjectDb>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDbContext<ChallengeDb>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddDbContext<TagDb>(opt => opt.UseSqlServer(connectionString));
+builder.Services.AddDbContext<StarDb>(opt => opt.UseSqlServer(connectionString));
 
 // Service Injection
 builder.Services.AddTransient<IUserService, UserService>();
@@ -24,6 +25,7 @@ builder.Services.AddTransient<ICompanyService, CompanyService>();
 builder.Services.AddTransient<IProjectService, ProjectService>();
 builder.Services.AddTransient<IChallengeService, ChallengeService>();
 builder.Services.AddTransient<ITagService, TagService>();
+builder.Services.AddTransient<IStarService, StarService>();
 
 
 var app = builder.Build();
