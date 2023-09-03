@@ -8,7 +8,7 @@ API developed in C# ASP .NET Core 7, feeds and consumes the SQL database.
 
 # Database Model
 
-![Database Model](docs/nexus_modelling.drawio.png)
+![Database Model](docs/nexus_modelling.png)
 
 ## Requisitos
 
