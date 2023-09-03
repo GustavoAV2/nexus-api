@@ -55,7 +55,7 @@ namespace Nexus.Api.Service
             }
 
             foundUser.Projects = await _projectDb.Project.Where(Project=> Project.UserId == id).ToListAsync();
-            foundUser.Skills = await _skillDb.Project.Where(Skill => Skill.UserId == id).ToListAsync();
+            foundUser.Skills = await _skillDb.Skill.Where(Skill => Skill.UserId == id).ToListAsync();
 
             return foundUser;
         }

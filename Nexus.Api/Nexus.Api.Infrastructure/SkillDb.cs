@@ -9,7 +9,7 @@ namespace Nexus.Api.Infrastructure
         public SkillDb(DbContextOptions<SkillDb> options)
         : base(options) { }
 
-        public DbSet<Skill> Project { get; set; }
+        public DbSet<Skill> Skill { get; set; }
         public DbSet<Skill> All => Set<Skill>();
     }
 }
