@@ -1,4 +1,5 @@
-﻿using Nexus.Api.Domain.Entities;
+﻿using Microsoft.AspNetCore.Http;
+using Nexus.Api.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Nexus.Api.Domain.Interfaces
 {
     public interface IFileService
     {
-        Task<File> CreateFile(File inputFile);
+        Task<File> CreateFile(IFormFile inputFile, string id);
         Task<List<File>> GetRepoFilesByRepoId(string projectId);
         Task<List<File>> GetAllFiles();
     }

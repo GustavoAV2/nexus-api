@@ -25,10 +25,10 @@ namespace Nexus.Api.Controllers
         }
 
 
-        [HttpPost(Name = "PostFile")]
-        public async Task<NexusFile> CreateFile(NexusFile file)
+        [HttpPost("{projectId}", Name = "PostFile")]
+        public async Task<NexusFile> CreateFile([FromForm] IFormFile file, string projectId)
         {
-            return await _fileService.CreateFile(file);
+            return await _fileService.CreateFile(file, projectId);
         }
     }
 }

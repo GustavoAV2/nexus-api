@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Nexus.Api.Domain.Entities;
@@ -6,9 +7,11 @@ using Nexus.Api.Domain.Interfaces;
 using Nexus.Api.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NexusFile = Nexus.Api.Domain.Entities.File;
 
 namespace Nexus.Api.Service
 {
@@ -19,27 +22,28 @@ namespace Nexus.Api.Service
         private readonly UserDb _userDb;
         private readonly FileDb _fileDb;
         private readonly IUserService _userService;
-        private IConfiguration _configuration { get; }
-        public FileService(ILogger<FileService> logger, IConfiguration configuration, ProjectDb projectDb, UserDb userDb, FileDb fileDb, IUserService userService)
+        private readonly string _storagePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName, "Nexus-FilesServer");
+
+        public FileService(ILogger<FileService> logger, ProjectDb projectDb, UserDb userDb, FileDb fileDb, IUserService userService)
         {
             _logger = logger;
             _fileDb = fileDb;
             _userDb = userDb;
             _projectDb = projectDb;
-            _configuration = configuration;
             _userService = userService;
         }
 
-        public async Task<File> CreateFile(File inputFile)
+        public async Task<NexusFile> CreateFile(IFormFile inputFile, string projectId)
         {
-            var newFile = new File()
+            var localFilePath = await CreateLocalFile(inputFile, projectId);
+            var newFile = new NexusFile()
             {
                 Id = Guid.NewGuid().ToString(),
                 Name = inputFile.Name,
-                Path= inputFile.Path,
-                Size= inputFile.Size,
-                Type= inputFile.Type,
-                ProjectId = inputFile.ProjectId
+                Path= localFilePath,
+                Size= (int)inputFile.Length,
+                Type= inputFile.ContentType,
+                ProjectId = projectId
             };
 
             _fileDb.File.Add(newFile);
@@ -47,7 +51,25 @@ namespace Nexus.Api.Service
             return newFile;
         }
 
-        public async Task<List<File>> GetRepoFilesByRepoId(string projectId)
+        public async Task<string> CreateLocalFile(IFormFile inputFile, string projectId)
+        {
+            if (!Directory.Exists(_storagePath))
+            {
+                Directory.CreateDirectory(_storagePath);
+            }
+
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(inputFile.FileName);
+            var filePath = Path.Combine(_storagePath, fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await inputFile.CopyToAsync(stream);
+            }
+
+            return filePath;
+        }
+
+        public async Task<List<NexusFile>> GetRepoFilesByRepoId(string projectId)
         {
             var foundFile = await _fileDb.File.Where(f => f.ProjectId == projectId).ToListAsync();
 
@@ -59,7 +81,7 @@ namespace Nexus.Api.Service
             return foundFile;
         }
 
-        public async Task<List<File>> GetAllFiles()
+        public async Task<List<NexusFile>> GetAllFiles()
         {
             var foundSkill = await _fileDb.All.ToListAsync();
             return foundSkill;
