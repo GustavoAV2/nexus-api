@@ -1,20 +1,3 @@
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.csproj.AssemblyReference.cache
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.AssemblyInfoInputs.cache
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.AssemblyInfo.cs
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.csproj.CoreCompileInputs.cache
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Service.deps.json
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Service.dll
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Service.pdb
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.dll
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\refint\Nexus.Api.Service.dll
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.pdb
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\ref\Nexus.Api.Service.dll
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Domain.dll
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Infrastructure.dll
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Infrastructure.pdb
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Domain.pdb
-C:\Users\Gustavo Voltolini\Desktop\Hackustria\nexus\nexus-api\Nexus.Api\Nexus.Api.Service\obj\Debug\net7.0\Nexus.Api.Service.csproj.CopyComplete
 C:\Users\RafaelMendesdeCarval\Desktop\Nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Service.deps.json
 C:\Users\RafaelMendesdeCarval\Desktop\Nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Service.dll
 C:\Users\RafaelMendesdeCarval\Desktop\Nexus\nexus-api\Nexus.Api\Nexus.Api.Service\bin\Debug\net7.0\Nexus.Api.Service.pdb

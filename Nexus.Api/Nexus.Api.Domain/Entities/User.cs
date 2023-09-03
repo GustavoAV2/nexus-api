@@ -14,5 +14,6 @@ namespace Nexus.Api.Domain.Entities
         public string Password { get; set; }
         public DateTime BirthDate { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
+        public virtual ICollection<Star> Stars { get; set; }
     }
 }
