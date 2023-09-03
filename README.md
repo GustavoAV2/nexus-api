@@ -2,14 +2,6 @@
 
 API developed in C# ASP .NET Core 7, feeds and consumes the SQL database.
 
-## Requisitos
-
-Certifique-se de ter as seguintes ferramentas instaladas em seu sistema local:
-
-- AspNetCore 7 SDK: [Link to download](https://dotnet.microsoft.com/download/dotnet/7.0)
-- SQL Server: 
-- Git: [Link to download](https://git-scm.com/downloads)
-
 # Project Map
 
 ![Project Map](docs/nexus_map.jpg)
@@ -17,6 +9,14 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu sistema local:
 # Database Model
 
 ![Database Model](docs/nexus_modelling.drawio.png)
+
+## Requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas em seu sistema local:
+
+- AspNetCore 7 SDK: [Link to download](https://dotnet.microsoft.com/download/dotnet/7.0)
+- SQL Server: 
+- Git: [Link to download](https://git-scm.com/downloads)
 
 # Configuration
 
@@ -51,14 +51,6 @@ Update-Database -Context UserDb
 ---
 
 The server will be available at https://localhost:7224/ by default.
-
-## Endpoints da API
-
-- `GET /api/exemplo`: Return all.
-- `GET /api/exemplo/{id}`: Retorna o exemplo com o ID fornecido.
-- `POST /api/exemplo`: Cria um novo exemplo.
-- `PUT /api/exemplo/{id}`: Atualiza o exemplo com o ID fornecido.
-- `DELETE /api/exemplo/{id}`: Remove o exemplo com o ID fornecido.
 
 ## License
 
