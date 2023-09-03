@@ -17,11 +17,11 @@ namespace Nexus.Api.Controllers
             _companyService = companyService;
         }
 
-        //[HttpGet(Name = "GetCompanies")]
-        //public IEnumerable<Company> GetAllCompanies()
-        //{
-        //    return ;
-        //}
+        [HttpGet(Name = "GetCompanies")]
+        public async Task<List<Company>> GetAllCompanies()
+        {
+            return await _companyService.GetAllCompanies();
+        }
 
 
         [HttpPost(Name = "CreateCompany")]

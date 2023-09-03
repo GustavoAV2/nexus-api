@@ -10,5 +10,6 @@ namespace Nexus.Api.Domain.Interfaces
     public interface ICompanyService
     {
         Task<Company> CreateCompany(Company inputUser);
+        Task<List<Company>> GetAllCompanies();
     }
 }

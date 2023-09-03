@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Nexus.Api.Domain.Entities;
@@ -35,6 +36,12 @@ namespace Nexus.Api.Service
             _companyDb.All.Add(newCompany);
             await _companyDb.SaveChangesAsync();
             return newCompany;
+        }
+
+        public async Task<List<Company>> GetAllCompanies()
+        {
+            var companies = await _companyDb.All.ToListAsync();
+            return companies;
         }
     }
 }

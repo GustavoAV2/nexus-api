@@ -17,12 +17,17 @@ namespace Nexus.Api.Controllers
             _userService = userService;
         }
 
-        [HttpGet(Name = "GetUsers")]
+        [HttpGet("All", Name = "GetUsers")]
         public async Task<List<User>> GetAllUsers()
         {
             return await _userService.GetAllUsers();
         }
 
+        [HttpGet("{id}", Name = "GetUserById")]
+        public async Task<User> GetUserById(string id)
+        {
+            return await _userService.GetUserById(id);
+        }
 
         [HttpPost(Name = "PostUser")]
         public async Task<User> CreateUser(User user)
